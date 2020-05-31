@@ -27,22 +27,27 @@
 3. mv_to_androidの`app`フォルダ配下に、`htmlSource`フォルダを作成します。
 
 4. RPGツクールMVプロジェクトをAndroid/iOS用にデプロイメントします。
+
 ![ss1](doc/ss1.jpg)
 
 5. デプロイメントされたwwwフォルダ配下のファイルを、mv_to_androidの`app/htmlSource`フォルダ配下に配置します。
+
 ![ss2](doc/ss2.jpg)
 
-6. Android Studioでmv_to_androidを開きます。
+6. Android Studioを起動します。
 
-   - `Open an existing Android Studio project`をクリック
+7. `Open an existing Android Studio project`をクリックします。
+
 ![ss3](doc/ss3.jpg)
-   - mv_to_androidのフォルダを選択し、`OK`をクリック
+
+
+8. mv_to_androidのフォルダを選択し、`OK`をクリックします。
+
 ![ss4](doc/ss4.jpg)
-   - プロジェクトが開きます。
 
-   
 
-7. PCにAndroid端末を接続し、`Debug app`アイコンをクリックすると、Androidにアプリがインストールされデバッグモードで起動します。
+9. PCにAndroid端末を接続し、`Debug app`アイコンをクリックすると、Androidにアプリがインストールされデバッグモードで起動します。
+
 ![ss5](doc/ss5.jpg)
 
 
@@ -62,6 +67,7 @@
 ![ss6](doc/ss6.jpg) 
 
 2. `app` > `java` > `com.example.mv_to_mobile_andorid` を右クリック > `Refactor` > `Rename` をクリックします。
+
 ![ss7](doc/ss7.jpg)
 
 3. Warningが表示されますが、`Rename package`をクリックします。
@@ -88,6 +94,7 @@
 
 
 9. パッケージ名が変更されました。
+
 ![ss11](doc/ss11.jpg)
 
 
