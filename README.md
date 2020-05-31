@@ -18,6 +18,15 @@
 
 
 
+## 動作確認
+
+- Android Studio 4.0
+- RPGツクールMV 1.6.2
+- Android 5.1
+- Andorid 9
+
+
+
 ## 使い方
 
 1. githubよりCloneもしくは[zipをダウンロード](https://github.com/waffs702/mv_to_android/archive/master.zip)します。
@@ -49,15 +58,6 @@
 9. PCにAndroid端末を接続し、`Debug app`アイコンをクリックすると、Androidにアプリがインストールされデバッグモードで起動します。
 
 ![ss5](doc/ss5.jpg)
-
-
-
-## 動作確認
-
-- Android Studio 4.0
-- RPGツクールMV 1.6.2
-- Android 5.1
-- Andorid 9
 
 
 
