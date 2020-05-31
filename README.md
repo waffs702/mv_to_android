@@ -20,12 +20,30 @@
 
 ## 使い方
 
-1. RPGツクールMVプロジェクトをAndroid/iOS用にデプロイメントします。
-![ss1](D:\github\mv_to_android\doc\ss1.jpg)
-2. デプロイメントされたwwwフォルダ配下のファイルを、`app/htmlSource`フォルダ配下に配置します。
-![ss2](D:\github\mv_to_android\doc\ss2.jpg)
-3. Android Studioで本プロジェクトをインポートします。
-4. PCにAndroid端末を接続してアプリを起動します。
+1. githubよりCloneもしくは[zipをダウンロード](https://github.com/waffs702/mv_to_android/archive/master.zip)します。
+
+2. ダウンロードした場合は、zipを解凍します。
+
+3. mv_to_androidの`app`フォルダ配下に、`htmlSource`フォルダを作成します。
+
+4. RPGツクールMVプロジェクトをAndroid/iOS用にデプロイメントします。
+    ![ss1](doc/ss1.jpg)
+
+5. デプロイメントされたwwwフォルダ配下のファイルを、mv_to_androidの`app/htmlSource`フォルダ配下に配置します。
+    ![ss2](doc/ss2.jpg)
+
+6. Android Studioでmv_to_androidを開きます。
+
+   1. `Open an existing Android Studio project`をクリック
+   <img src="doc/ss3.jpg" alt="ss3" style="zoom:50%;" />
+   2. mv_to_androidのフォルダを選択し、`OK`をクリック
+   <img src="doc/ss4.jpg" alt="ss3" style="zoom:50%;" />
+   3. プロジェクトが開きます。
+
+   
+
+7. PCにAndroid端末を接続し、`Debug app`アイコンをクリックすると、Androidにアプリがインストールされデバッグモードで起動します。
+<img src="doc/ss5.jpg" alt="ss3" style="zoom:50%;" />
 
 
 
@@ -39,12 +57,27 @@
 
 
 ## プロジェクト名の変更方法
+1. プロジェクトの表示を`Android`に変更します。
+<img src="doc/ss6.jpg" alt="ss3" style="zoom:50%;" />
+2. `app` > `java` > `com.example.mv_to_mobile_andorid` を右クリック > `Refactor` > `Rename` をクリックします。
+<img src="doc/ss7.jpg" alt="ss3" style="zoom:50%;" />
+3. Warningが表示されますが、`Rename package`をクリックします。
+4. 任意のパッケージ名を入力し、`Refactor`をクリックします。※com.example.mv_to_mobile_andoridの`mv_to_mobile_andorid`の部分のみ変更されます。
+<img src="doc/ss8.jpg" alt="ss3" style="zoom:50%;" />
+5. `Gradle Scripts` > `build.gradle(Module: app)`を開き、`applicationId`を任意のパッケージ名に変更します。その後、`Sync Now`をクリックします。
+<img src="doc/ss9.jpg" alt="ss3" style="zoom:50%;" />
+6. `app` > `manifests` > `AndroidManifest.xml` を開き、`package="com.example.XXXX"` (XXXXは入力したパッケージ名)の`example`の部分を右クリック > `Refactor` > `Rename` をクリックします。
+7. Warningが表示されますが、`Rename package`をクリックします。
+8. `build.gradle` で入力したものと同じものを入力して、 `Refactor` をクリックします。`example`の部分が入力したものに変更されます。
+<img src="doc/ss10.jpg" alt="ss3" style="zoom:50%;" />
+9. パッケージ名が変更されました。
+<img src="doc/ss11.jpg" alt="ss3" style="zoom:50%;" />
 
 
 
 ## 画面の向き変更方法
 
-- `app\src\main\AndroidManifest.xml`の`android:screenOrientation=`を変更します。
+- `app\src\main\AndroidManifest.xml`を開き、`android:screenOrientation=`の部分を変更します。
 
   - 縦向き固定: `android:screenOrientation="portrait"`
   - 横向き固定: `android:screenOrientation="landscape"`
@@ -57,10 +90,8 @@
               android:launchMode="singleTop">
               ...
           </activity>
-      </application>
+  </application>
   ```
-
-  
 
 
 
@@ -71,3 +102,7 @@
 - アプリ内課金
 - Twitter画面スクリーンショットシェア
 
+
+
+## License
+MIT
