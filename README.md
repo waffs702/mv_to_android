@@ -3,16 +3,16 @@
 
 
 ## 概要
-* RPGツクールMVで作成されたプロジェクトをAndroidアプリ化するためのAndroid Studio プロジェクトです。
-* プラグインは不要、RPGツクールMVでデプロイメントしたファイルを所定の場所に配置するだけです。
-* Android側でWebViewを表示し、RPGツクールMVで出力されたhtml/javascriptを読み込みます。
+* RPGツクールMV/RPGツクールMZで作成されたプロジェクトをAndroidアプリ化するためのAndroid Studio プロジェクトです。
+* プラグインは不要、RPGツクールMV(MZ)でデプロイメントしたファイルを所定の場所に配置するだけです。
+* Android側でWebViewを表示し、RPGツクールMV(MZ)で出力されたhtml/javascriptを読み込みます。
 * ローカル(`file://`)で実行される `XMLHttpRequest`等のCORSを回避するために、[WebViewAssetLoader](https://developer.android.com/reference/androidx/webkit/WebViewAssetLoader)を使用しています。
 
 
 
 ## 必要なもの
 
-* [RPGツクールMV](http://tkool.jp/mv/)
+* [RPGツクールMV](https://tkool.jp/mv/) (または、[RPGツクールMZ](https://tkool.jp/mz/))
 * [Android Studio](https://developer.android.com/studio/index.htm)
 * Android5.1以上
 
@@ -20,10 +20,17 @@
 
 ## 動作確認
 
-- Android Studio 4.0
-- RPGツクールMV 1.6.2
-- Android 5.1
-- Andorid 9
+- RPGツクールMV
+  - Android Studio 4.0
+  - RPGツクールMV 1.6.2
+  - Android 5.1
+  - Andorid 9
+
+
+- RPGツクールMZ
+  - Android Studio 4.0
+  - RPGツクールMZ 1.0.1
+  - Andorid 10
 
 
 
@@ -38,6 +45,10 @@
 4. RPGツクールMVプロジェクトをAndroid/iOS用にデプロイメントします。
 
 ![ss1](doc/ss1.jpg)
+
+​	RPGツクールMZの場合は、ウェブブラウザ用にデプロイメントします。
+
+​	![ss12](doc/ss12.jpg)
 
 5. デプロイメントされたwwwフォルダ配下のファイルを、mv_to_androidの`app/htmlSource`フォルダ配下に配置します。
 
