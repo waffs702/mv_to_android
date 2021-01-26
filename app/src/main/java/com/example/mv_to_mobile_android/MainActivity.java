@@ -1,14 +1,15 @@
 package com.example.mv_to_mobile_android;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.webkit.WebViewAssetLoader;
-
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.webkit.WebViewAssetLoader;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webView;
@@ -24,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+
+        ScriptHandler scriptHandler = new ScriptHandler();
+        Handler handler = new Handler();
+        scriptHandler.setActivity(MainActivity.this);
+        scriptHandler.setHandler(handler);
+        scriptHandler.setWebView(webView);
+        webView.addJavascriptInterface(scriptHandler, "MVZxAndroidHandlers");
 
         final WebViewAssetLoader assetLoader = new WebViewAssetLoader.Builder()
                 .addPathHandler("/htmlSource/", new WebViewAssetLoader.AssetsPathHandler(this))
