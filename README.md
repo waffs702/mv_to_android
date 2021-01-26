@@ -44,53 +44,53 @@
 
 4. RPGツクールMVプロジェクトをAndroid/iOS用にデプロイメントします。
 
-![ss1](doc/ss1.jpg)
+![ss1](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss1.jpg)
 
 ​	RPGツクールMZの場合は、ウェブブラウザ用にデプロイメントします。
 
-​	![ss12](doc/ss12.jpg)
+​	![ss12](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss12.jpg)
 
 5. デプロイメントされたwwwフォルダ配下のファイルを、mv_to_androidの`app/htmlSource`フォルダ配下に配置します。
 
-![ss2](doc/ss2.jpg)
+![ss2](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss2.jpg)
 
 6. Android Studioを起動します。
 
 7. `Open an existing Android Studio project`をクリックします。
 
-![ss3](doc/ss3.jpg)
+![ss3](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss3.jpg)
 
 
 8. mv_to_androidのフォルダを選択し、`OK`をクリックします。
 
-![ss4](doc/ss4.jpg)
+![ss4](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss4.jpg)
 
 
 9. PCにAndroid端末を接続し、`Debug app`アイコンをクリックすると、Androidにアプリがインストールされデバッグモードで起動します。
 
-![ss5](doc/ss5.jpg)
+![ss5](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss5.jpg)
 
 
 
 ## プロジェクト名の変更方法
 1. プロジェクトの表示を`Android`に変更します。
 
-![ss6](doc/ss6.jpg) 
+![ss6](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss6.jpg) 
 
 2. `app` > `java` > `com.example.mv_to_mobile_andorid` を右クリック > `Refactor` > `Rename` をクリックします。
 
-![ss7](doc/ss7.jpg)
+![ss7](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss7.jpg)
 
 3. Warningが表示されますが、`Rename package`をクリックします。
 
 
 4. 任意のパッケージ名を入力し、`Refactor`をクリックします。(com.example.mv_to_mobile_andoridの`mv_to_mobile_andorid`の部分のみ変更されます。)
 
-![ss8](doc/ss8.jpg)
+![ss8](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss8.jpg)
 
 
 5. `Gradle Scripts` > `build.gradle(Module: app)`を開き、`applicationId`を任意のパッケージ名に変更します。その後、`Sync Now`をクリックします。
-![ss9](doc/ss9.jpg)
+![ss9](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss9.jpg)
 
 
 6. `app` > `manifests` > `AndroidManifest.xml` を開き、`package="com.example.XXXX"` (XXXXは入力したパッケージ名)の`example`の部分を右クリック > `Refactor` > `Rename` をクリックします。
@@ -101,12 +101,12 @@
 
 8. `build.gradle` で入力したものと同じものを入力して、 `Refactor` をクリックします。`example`の部分が入力したものに変更されます。
 
-![ss10](doc/ss10.jpg)
+![ss10](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss10.jpg)
 
 
 9. パッケージ名が変更されました。
 
-![ss11](doc/ss11.jpg)
+![ss11](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss11.jpg)
 
 
 
