@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
         String path = "https://appassets.androidplatform.net/htmlSource/index.html";
         this.webView.loadUrl(path);
+
+        Advertisement.initAd();
+        Advertisement.loadRewardedAd(null);
     }
 
     @Override

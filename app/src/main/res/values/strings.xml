@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">mv_to_mobile_android</string>
+    <string name="ad_application_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ad_rewarded_unit_id">ca-app-pub-3940256099942544/5224354917</string>
 </resources>

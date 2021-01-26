@@ -34,5 +34,55 @@ public class ScriptHandler {
         Log.v(TAG, log);
     }
 
+    @JavascriptInterface
+    public void initAd() {
+        Advertisement.initAd();
+    }
+
+    @JavascriptInterface
+    public void loadRewardedAd(String callbackKey) {
+        this.handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Advertisement.loadRewardedAd(new Advertisement.LoadRewardedCallback() {
+                    @Override
+                    public void onLoaded() {
+                        callbackToJavascript("onLoaded", callbackKey);
+                    }
+
+                    @Override
+                    public void onFailed() {
+                        callbackToJavascript("onFailed", callbackKey);
+                    }
+                });
+            }
+        });
+    }
+
+    @JavascriptInterface
+    public void showRewardedAd(String callbackKey) {
+        this.handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Advertisement.showRewardedAd(activity, new Advertisement.ShowRewardedCallback() {
+                    @Override
+                    public void onCanceled() {
+                        callbackToJavascript("onCanceled", callbackKey);
+                    }
+
+                    @Override
+                    public void onFailed() {
+                        callbackToJavascript("onFailed", callbackKey);
+                    }
+
+                    @Override
+                    public void onRewarded() {
+                        callbackToJavascript("onRewarded", callbackKey);
+                    }
+                });
+            }
+        });
+    }
+
 
 }
