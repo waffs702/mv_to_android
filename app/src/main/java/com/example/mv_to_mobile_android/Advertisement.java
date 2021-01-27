@@ -61,7 +61,7 @@ public class Advertisement {
             @Override
             public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                 isLoading = false;
-                Log.d("loadRewardedAd",  "onAdFailedToLoad" + loadAdError.getMessage());
+                Log.d("loadRewardedAd",  "onAdFailedToLoad : " + loadAdError.getMessage());
                 mRewardedAd = null;
                 if (loadRewardedCallback != null) {
                     loadRewardedCallback.onFailed();
@@ -73,6 +73,7 @@ public class Advertisement {
         String unitId = context.getString(R.string.ad_rewarded_unit_id);
 
         RewardedAd.load(context, unitId, adRequest, adLoadCallback);
+        Log.d("loadRewardedAd", "Request Load");
     }
 
     public static void showRewardedAd(Activity activity, ShowRewardedCallback showRewardedCallback) {
