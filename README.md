@@ -29,7 +29,7 @@
 
 - RPGツクールMZ
   - Android Studio 4.0
-  - RPGツクールMZ 1.0.1
+  - RPGツクールMZ 1.1.1
   - Andorid 10
 
 
@@ -38,7 +38,7 @@
 
 1. githubよりCloneもしくは[zipをダウンロード](https://github.com/waffs702/mv_to_android/archive/master.zip)します。
 
-    * 広告機能などが無いバージョンもあります。こちらから[zipをダウンロード](https://github.com/waffs702/mv_to_android/archive/vanilla.zip)できます。
+    * 広告機能などが無いバージョンもあります。[こちらから](https://github.com/waffs702/mv_to_android/archive/vanilla.zip)zipをダウンロードできます。
 
 2. ダウンロードした場合は、zipを解凍します。
 
@@ -46,31 +46,31 @@
 
 4. RPGツクールMVプロジェクトをAndroid/iOS用にデプロイメントします。
 
-![ss1](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss1.jpg)
+    ![ss1](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss1.jpg)
 
-​	RPGツクールMZの場合は、ウェブブラウザ用にデプロイメントします。
+    * RPGツクールMZの場合は、ウェブブラウザ/Android/iOS用にデプロイメントします。
 
-​	![ss12](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss12.jpg)
+    ![ss12](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss12.jpg)
 
 5. デプロイメントされたwwwフォルダ配下のファイルを、mv_to_androidの`app/htmlSource`フォルダ配下に配置します。
 
-![ss2](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss2.jpg)
+    ![ss2](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss2.jpg)
 
 6. Android Studioを起動します。
 
 7. `Open an existing Android Studio project`をクリックします。
 
-![ss3](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss3.jpg)
+    ![ss3](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss3.jpg)
 
 
 8. mv_to_androidのフォルダを選択し、`OK`をクリックします。
 
-![ss4](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss4.jpg)
+    ![ss4](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss4.jpg)
 
 
 9. PCにAndroid端末を接続し、`Debug app`アイコンをクリックすると、Androidにアプリがインストールされデバッグモードで起動します。
 
-![ss5](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss5.jpg)
+    ![ss5](https://raw.githubusercontent.com/wiki/waffs702/mv_to_android/images/android/ss5.jpg)
 
 
 ## 変更方法/追加機能
