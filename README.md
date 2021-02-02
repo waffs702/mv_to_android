@@ -78,7 +78,7 @@
 - [プロジェクト名の変更方法](https://github.com/waffs702/mv_to_android/wiki/%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E5%90%8D%E3%81%AE%E5%A4%89%E6%9B%B4%E6%96%B9%E6%B3%95)
 - [画面の向き変更方法](https://github.com/waffs702/mv_to_android/wiki/%E7%94%BB%E9%9D%A2%E3%81%AE%E5%90%91%E3%81%8D%E5%A4%89%E6%9B%B4%E6%96%B9%E6%B3%95)
 - [動画広告再生(リワード広告)](https://github.com/waffs702/mv_to_android/wiki/%E5%8B%95%E7%94%BB%E5%BA%83%E5%91%8A%E5%86%8D%E7%94%9F(%E3%83%AA%E3%83%AF%E3%83%BC%E3%83%89%E5%BA%83%E5%91%8A))
-
+- [SNSシェア](https://github.com/waffs702/mv_to_android/wiki/SNS%E3%82%B7%E3%82%A7%E3%82%A2)
 
 
 ## 今後追加予定の機能
@@ -86,7 +86,6 @@
 - バナー広告
 - push通知(Firebase)
 - アプリ内課金
-- Twitter画面スクリーンショットシェア
 
 
 ## License
