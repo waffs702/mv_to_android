@@ -93,6 +93,26 @@ public class ScriptHandler {
     }
 
     @JavascriptInterface
+    public void showInterstitialAd(String callbackKey) {
+        this.handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Advertisement.showInterstitialAd(activity, new Advertisement.ShowInterstitialCallback() {
+                    @Override
+                    public void onSucceeded() {
+                        callbackToJavascript("onSucceeded", callbackKey);
+                    }
+
+                    @Override
+                    public void onFailed() {
+                        callbackToJavascript("onFailed", callbackKey);
+                    }
+                });
+            }
+        });
+    }
+
+    @JavascriptInterface
     public void shareSNS(String shareText, String imageData) {
         this.handler.post(new Runnable() {
             @Override

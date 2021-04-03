@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         Advertisement.initAd();
         Advertisement.loadRewardedAd(null);
+        Advertisement.loadInterstitialAd();
     }
 
     @Override
