@@ -82,7 +82,7 @@
 - [動画広告再生(リワード広告)](https://github.com/waffs702/mv_to_android/wiki/%E5%8B%95%E7%94%BB%E5%BA%83%E5%91%8A%E5%86%8D%E7%94%9F(%E3%83%AA%E3%83%AF%E3%83%BC%E3%83%89%E5%BA%83%E5%91%8A))
 - [インタースティシャル広告表示](https://github.com/waffs702/mv_to_android/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A3%E3%83%AB%E5%BA%83%E5%91%8A)
 - [SNSシェア](https://github.com/waffs702/mv_to_android/wiki/SNS%E3%82%B7%E3%82%A7%E3%82%A2)
-
+- [ブラウザ起動](https://github.com/waffs702/mv_to_android/wiki/%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%82%92%E8%B5%B7%E5%8B%95)
 
 ## 今後追加予定の機能
 
