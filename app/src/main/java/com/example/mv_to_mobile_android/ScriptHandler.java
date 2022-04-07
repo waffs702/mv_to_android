@@ -148,4 +148,20 @@ public class ScriptHandler {
         return Uri.parse(path);
     }
 
+    @JavascriptInterface
+    public void callBrowser(String url) {
+        this.handler.post(new Runnable() {
+            @Override
+            public void run() {
+                callBrowserIntent(url);
+            }
+        });
+    }
+
+    private void callBrowserIntent(String url) {
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+        this.activity.startActivity(intent);
+    }
+
 }
