@@ -1,11 +1,14 @@
 package com.example.mv_to_mobile_android;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Base64;
@@ -13,7 +16,14 @@ import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 
+import androidx.core.app.ActivityCompat;
+
 import java.io.ByteArrayOutputStream;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.logging.SimpleFormatter;
 
 public class ScriptHandler {
     private static final String TAG = "ScriptHandler";
@@ -117,6 +127,21 @@ public class ScriptHandler {
         this.handler.post(new Runnable() {
             @Override
             public void run() {
+                if (activity != null) {
+                    MainActivity mainActivity = (MainActivity)activity;
+                    mainActivity.requestWriteExternalStoragePermission(new MainActivity.RequestPermissionCallback() {
+                        @Override
+                        public void onGranted() {
+                            showShareSheet(shareText, imageData);
+                        }
+
+                        @Override
+                        public void onDenied() {
+                            showShareSheet(shareText, "");
+                        }
+                    });
+                    return;
+                }
                 showShareSheet(shareText, imageData);
             }
         });
@@ -136,15 +161,27 @@ public class ScriptHandler {
         if (imageUri != null) {
             shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
             shareIntent.setType("image/jpeg");
+        } else {
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(Intent.EXTRA_TITLE, shareText);
         }
         this.activity.startActivity(Intent.createChooser(shareIntent, null));
     }
 
     private Uri getImageUri(Bitmap inImage){
+        Context context = MyApplication.getInstance();
+
+        if (Build.VERSION.SDK_INT >= 23 && ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            return null;
+        }
+
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
         inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-        Context context = MyApplication.getInstance();
-        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), inImage,"title",null);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        String title = sdf.format(new Date());
+
+        String path = MediaStore.Images.Media.insertImage(context.getContentResolver(), inImage, title,null);
         return Uri.parse(path);
     }
 
