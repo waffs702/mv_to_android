@@ -40,5 +40,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation 'com.google.android.gms:play-services-ads:19.7.0'
+    implementation 'com.google.android.gms:play-services-measurement:21.0.0'
+    implementation 'com.google.android.gms:play-services-measurement-api:21.0.0'
+    implementation 'com.google.android.gms:play-services-measurement-impl:21.0.0'
+    implementation 'com.google.android.gms:play-services-measurement-sdk:21.0.0'
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'
 }

@@ -28,14 +28,14 @@ import java.util.logging.SimpleFormatter;
 public class ScriptHandler {
     private static final String TAG = "ScriptHandler";
     private Handler handler;
-    private Activity activity;
+    private MainActivity activity;
     private WebView webView;
 
     public void setHandler(Handler handler) {
         this.handler = handler;
     }
 
-    public void setActivity(Activity activity) {
+    public void setActivity(MainActivity activity) {
         this.activity = activity;
     }
 
@@ -44,6 +44,7 @@ public class ScriptHandler {
     }
 
     private void callbackToJavascript(String args, String key) {
+        Log.v("callbackJS", args);
         this.webView.loadUrl("javascript:window.MVZxNativeManager.nativeCallback('" + args + "', '" + key + "');");
     }
 
@@ -118,6 +119,16 @@ public class ScriptHandler {
                         callbackToJavascript("onFailed", callbackKey);
                     }
                 });
+            }
+        });
+    }
+
+    @JavascriptInterface
+    public void showBannerAd(String callbackKey) {
+        this.handler.post(new Runnable() {
+            @Override
+            public void run() {
+                activity.loadBanner();
             }
         });
     }
